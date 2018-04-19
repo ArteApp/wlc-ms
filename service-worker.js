@@ -6,7 +6,7 @@ importScripts("//cdn.jsdelivr.net/npm/pouchdb@6.4.3/dist/pouchdb.min.js");
 
 
 self.toolbox.options.cache = {
-  name: 'wlc-course-cache-201803181814'
+  name: 'wlc-ms-cache-201804182215'
 };
 
 // pre-cache our key assets
@@ -53,7 +53,7 @@ self.addEventListener('push', function (event) {
   //console.log('[Service Worker] Push Received.');
   //console.log(`[Service Worker] Push had this data: "${event.data.text()}"`);
 
-  const title = 'WLC Course';
+  const title = 'WLC Memorizing the Bible';
   const options = {
     body: 'Esta é uma notificação de exemplo',
     icon: 'assets/imgs/logo_only.png',
@@ -92,8 +92,8 @@ self.addEventListener('pushsubscriptionchange', function (event) {
 
 //Envio de Notificações agendadas utilizando PouchDB
 
-const db = new PouchDB('wlc-course');
-const remotedb = new PouchDB('https://admin:8eda208157d4@couchdb-bfef4c.smileupps.com/wlc-course');
+const db = new PouchDB('wlc-ms');
+const remotedb = new PouchDB('https://admin:8eda208157d4@couchdb-bfef4c.smileupps.com/wlc-ms');
 
 setInterval(async function () {
   //if (new Date().getHours() === 17 && new Date().getMinutes() === 43 && new Date().getSeconds() === 30) {
